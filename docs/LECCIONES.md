@@ -1,23 +1,25 @@
 # Classroom "Página Web y mantenimiento" (ConstruIA)
 
-> Guion y mapa del video (15 bloques, Hender en pantalla con un mapa de Excalidraw): están en la carpeta de ConstruIA de Rufero Pro, no en este repo.
+> El guion y el mapa del video (15 bloques, con Hender en pantalla y un mapa de Excalidraw) están en la carpeta de ConstruIA de Rufero Pro, no en este repo.
 
-Lo que sale de este repo para cada lección. Compañía de ejemplo de los videos: **Techos Ejemplo LLC** (Houston, TX).
+Lo que se usa de este repo en cada lección. La compañía de ejemplo del video es **Techos Ejemplo LLC** (Houston, TX).
 
-| # | Lección | Qué se usa de este repo | Estado |
-|---|---|---|---|
-| 0 | Diagnóstico de tu página actual | — (checklist: velocidad, celular, formulario, Google, quién es dueño de qué) | Por escribir |
-| 1 | Que todo sea tuyo (dominio y accesos) | `compania.dominio`; guía de comprar dominio y cuentas a nombre de la compañía | Por escribir |
-| 2 | Planear antes de construir | La entrevista de `INSTALAR.md` (fase 1, bloques A–G) como hoja de trabajo | Listo en el repo |
-| 3 | Construir con la plantilla | `PROMPT-PARA-PEGAR.md` → `INSTALAR.md` → `compania/sitio.json`, `npm run fotos`, `npm run vista-previa` | Listo en el repo |
-| 3b | El estimador de techos | `componentes/estimador/` + `docs/GOOGLE-MAPS.md`: precios por square, materiales, clave de Google restringida, modo manual | Listo en el repo |
-| 3c | La calculadora de financiamiento | `componentes/financiamiento/`: niveles de crédito/APR, plazos, montos, link de precalificación, aviso legal | Listo en el repo |
-| 4 | Que te traiga clientes (formularios, pixel, landing pages) | `leads.correo` / `WEB3FORMS_KEY`, `medicion.ga4`, `medicion.meta_pixel` (el estimador y el formulario disparan `generate_lead` y `Lead`) | Listo: formularios, pixel, GA4 y landing `/free-roof-inspection/` |
-| 5 | Publicar en GitHub y Vercel con su dominio | `npm run publicar`, `vercel.json` (lo escribe el build), variables de entorno en Vercel, conectar dominio | Script listo, sin probar en una cuenta real |
-| 6 | Google: GBP, Search Console y SEO local | `medicion.search_console`, `sitemap.xml`, schema `RoofingContractor`, `llms.txt`, títulos y descripciones por ciudad | Base lista; guía por escribir |
-| 7 | Mantenimiento con IA | Skill `/web-cambio` (listo) · `/web-revision-mensual` (por hacer: `npm run revisar` + leads + Google) | `/web-cambio` listo |
-| 8 | Migrar desde Wix, GoDaddy o WordPress sin perder Google | `redirecciones` en `sitio.json` → redirecciones 301 en `vercel.json` | Base lista; guía por escribir |
-| 9 | Cuando algo se rompe | `/web-emergencia` (por hacer) · tabla de errores de `docs/GOOGLE-MAPS.md` e `INSTALAR.md` | Por hacer |
-| 10 | Medir y mejorar | GA4 + Meta Pixel (eventos de lead), Search Console | Por escribir |
+| # | Lección | Qué se usa del repo |
+|---|---|---|
+| 00 | Presentación: lo que vas a tener al final | La página de ejemplo (`npm run vista-previa`) |
+| 01 | Por qué tu página no te trae clientes | Un prompt de diagnóstico (Claude Code revisa la página actual con PageSpeed) |
+| 02 | Que todo sea tuyo: dominio y accesos | `compania.dominio`; las cuentas a nombre de la compañía |
+| 03 | Planear antes de construir | La entrevista de `INSTALAR.md` (fase 1, bloques A–G) como lista de lo que hay que tener |
+| 04 | Instalar la plantilla y la entrevista | `PROMPT-PARA-PEGAR.md` → `INSTALAR.md` → `compania/sitio.json` |
+| 05 | Tus fotos reales, tu logo y tus colores | `npm run fotos`, `marca` (colores, `plantilla/fuentes.json`, logo) |
+| 06 | El estimador de techos | `componentes/estimador/` + `docs/GOOGLE-MAPS.md` + `npm run claves -- GOOGLE_MAPS_API_KEY` |
+| 07 | La calculadora de financiamiento | `componentes/financiamiento/` + `financiamiento` en `sitio.json` |
+| 08 | Que los leads te lleguen | `leads.correo` / `WEB3FORMS_KEY`, `medicion.meta_pixel`, `medicion.ga4`, la landing `/free-roof-inspection/` |
+| 09 | Publicar con tu dominio | GitHub (`gh`), Vercel (`vercel.json`, `npm run publicar`), variables de entorno y dominio |
+| 10 | Google: tu perfil, Search Console y SEO local | `medicion.search_console`, `sitemap.xml`, el schema `RoofingContractor`, `llms.txt` |
+| 11 | Cambios con /web-cambio y la revisión del mes | El skill `/web-cambio`, `npm run revisar` y el prompt de la revisión del mes |
+| 12 | Migrar desde Wix, GoDaddy o WordPress | `redirecciones` en `sitio.json` → redirecciones 301 en `vercel.json` |
+| 13 | Cuando algo se rompe | Un prompt de revisión en orden, la tabla de errores de `docs/GOOGLE-MAPS.md` y la de `INSTALAR.md` |
+| 14 | Tu tarea | Publicar la página con su dominio y compartir el link en la comunidad |
 
-Cada lección lleva: video, guía escrita completa en la lección de Skool, prompts completos y "Tu tarea".
+Cada lección lleva el video, la guía escrita completa en la lección de Skool, los prompts completos y "Tu tarea".
