@@ -74,6 +74,22 @@ const STARS = "★★★★★";
 
 // ---------------------------------------------------------------- fotos (siempre de la carpeta del sitio)
 const fotosUsadas = new Set();
+const videosUsados = new Set();
+// Video real de la compañía (compania/videos/). Sin sonido, en bucle; la foto sirve de portada mientras carga.
+// Si el archivo no existe, devuelve "" y se usa la foto.
+function video(v, cls = "", posterFoto) {
+  if (!v?.archivo || !fs.existsSync(P("compania/videos", v.archivo))) {
+    if (v?.archivo) avisos.push(`Falta el video: compania/videos/${v.archivo} — ${v.pide || v.alt || ""}`);
+    return "";
+  }
+  videosUsados.add(v.archivo);
+  // Portada: el cuadro que saca `npm run videos` (<video>-portada.jpg); si no existe, la foto de ese lugar.
+  const propia = v.archivo.replace(/\.[^.]+$/, "") + "-portada.jpg";
+  const pf = fs.existsSync(P("compania/fotos", propia)) ? propia : posterFoto?.archivo && fs.existsSync(P("compania/fotos", posterFoto.archivo)) ? posterFoto.archivo : "";
+  if (pf) fotosUsadas.add(pf);
+  const poster = pf ? ` poster="/img/${esc(pf)}"` : "";
+  return `<video${cls ? ` class="${cls}"` : ""} autoplay muted loop playsinline preload="metadata"${poster} aria-label="${esc(v.alt || "")}"><source src="/video/${esc(v.archivo)}" type="video/mp4"></video>`;
+}
 function foto(f, cls = "", lazy = true) {
   if (!f) return "";
   const src = P("compania/fotos", f.archivo || "");
@@ -394,7 +410,7 @@ function inicio() {
   const desc = `Roof replacement, roof repair and storm damage restoration in ${Z.ciudad_base}, ${Z.estado} and nearby: ${ciudadesTxt(Z.ciudades.slice(1, 4))}. Free inspection${EST ? " and instant online roof estimate" : ""}. Call ${C.telefono}.`;
   const H = D.hero, N = D.nosotros;
   const tag = (t) => (t ? `<span class="tag${t === "After" ? " after" : ""}">${esc(t)}</span>` : "");
-  const projs = (D.proyectos || []).map((p) => `<figure class="proj">${foto(p)}${tag(p.etiqueta)}<figcaption><b>${esc(p.titulo)}</b><span>${esc(p.lugar)}</span></figcaption></figure>`).join("");
+  const projs = (D.proyectos || []).map((p) => `<figure class="proj">${video(p.video, "", p) || foto(p)}${tag(p.etiqueta)}<figcaption><b>${esc(p.titulo)}</b><span>${esc(p.lugar)}</span></figcaption></figure>`).join("");
   const conf = (H.confianza || []).map((t) => `<span>${esc(t)}</span>`).join("");
   const rating = D.resenas?.calificacion ? `<span><b>${STARS}</b> ${D.resenas.calificacion} on Google</span>` : "";
   const tarjetaHero = EST ? `<div class="hero-card">
@@ -408,7 +424,7 @@ function inicio() {
 
   const html = head({ slug: "", titulo: tituloSeo, desc, faq: D.faq_inicio, css: [...cssEst], activo: "home" }) + `<main id="main">
 <section class="hero" aria-label="Introduction"><div class="hero-in">
- ${foto(H.foto, "hero-bg", false)}
+ ${video(H.video, "hero-bg", H.foto) || foto(H.foto, "hero-bg", false)}
  <div class="hero-copy">
   <p class="eyebrow">${esc(H.eyebrow)}</p>
   <h1>${H.titulo}</h1>
@@ -705,6 +721,7 @@ ${herramientas ? `\n## Tools\n${herramientas}\n` : ""}
     headers: [
       { source: "/img/(.*)", headers: [{ key: "Cache-Control", value: "public, max-age=2592000" }] },
       { source: "/estimador/img/(.*)", headers: [{ key: "Cache-Control", value: "public, max-age=2592000" }] },
+      { source: "/video/(.*)", headers: [{ key: "Cache-Control", value: "public, max-age=2592000" }] },
       { source: "/(.*)", headers: [{ key: "X-Content-Type-Options", value: "nosniff" }, { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" }] }
     ]
   };
@@ -721,6 +738,7 @@ function estaticos() {
   }
   if (FIN) for (const f of ["financiamiento.js", "financiamiento.css"]) copiar(P("componentes/financiamiento", f), path.join(DIST, "financiamiento", f));
   for (const f of fotosUsadas) copiar(P("compania/fotos", f), path.join(DIST, "img", f));
+  for (const f of videosUsados) copiar(P("compania/videos", f), path.join(DIST, "video", f));
   for (const rel of [M.logo, M.logo_blanco, M.icono, ...(D.credenciales || []).map((c) => c.imagen)]) if (archivoMarca(rel)) copiar(P("compania", rel), path.join(DIST, rel));
   // favicon por defecto: un techo con el color de la marca
   escribir("favicon.svg", `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="${M.tinta || "#1c1917"}"/><path d="M12 34 32 17l20 17" fill="none" stroke="${M.color}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 31v16h26V31" fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="round"/></svg>`);

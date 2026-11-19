@@ -52,6 +52,14 @@
     });
   });
 
+  // Videos: si la persona pidió menos movimiento, se quedan quietos; si no, solo corren cuando se ven (ahorra datos)
+  const vids = document.querySelectorAll('video[autoplay]');
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) vids.forEach((v) => { v.removeAttribute('autoplay'); v.pause(); });
+  else if ('IntersectionObserver' in window) {
+    const vo = new IntersectionObserver((ents) => ents.forEach((en) => { if (en.isIntersecting) en.target.play().catch(() => {}); else en.target.pause(); }));
+    vids.forEach((v) => vo.observe(v));
+  }
+
   // Formulario de contacto: no permitir doble envio
   document.querySelectorAll('form.form').forEach((f) => f.addEventListener('submit', () => {
     const b = f.querySelector('button[type=submit]'); if (b) { b.disabled = true; const s = b.querySelector('span'); if (s) s.textContent = 'Sending…'; }

@@ -17,7 +17,8 @@ Plantilla de ConstruIA / Rufero Pro: sitio estático con **estimador de techos p
 - `plantilla/estilos.css`, `plantilla/site.js`: diseño (misma estructura que proudroofingtx.com). Colores y fuente se inyectan por página en `:root` (`--brand`, `--brand-oscuro`, `--ink`, `--fuente-titulos`, `--fuente-texto`).
 - `componentes/estimador/`: el estimador. Lee `window.ESTIMADOR` (lo escribe build.mjs). Google: Maps JavaScript API + Places API (New) con `PlaceAutocompleteElement` + Solar API `buildingInsights:findClosest`. Sin clave o si Google falla → modo manual. Precios en `sitio.json` **por square** (el build los pasa a pie²). Manda el lead por Web3Forms (`WEB3FORMS_KEY`) o FormSubmit (`leads.correo`) y dispara `generate_lead` (GA4) y `Lead` (Meta Pixel).
 - `componentes/financiamiento/`: la calculadora (amortización normal). Lee `window.FINANCIAMIENTO`. Aviso legal obligatorio.
-- `scripts/`: `claves`, `vista-previa` (localhost:4321), `revisar`, `fotos` (sharp: endereza, quita GPS, achica), `publicar` (Vercel).
+- `compania/videos/`: videos reales (portada y proyectos), sin sonido y en bucle; se pausan solos si la persona pide menos movimiento o si no se ven.
+- `scripts/`: `claves`, `vista-previa` (localhost:4321), `revisar`, `fotos` (sharp: endereza, quita GPS, achica), `videos` (ffmpeg: 12 s, sin sonido, HDR → normal, portada), `publicar` (Vercel).
 - Claves en `.env`: `GOOGLE_MAPS_API_KEY`, `WEB3FORMS_KEY` (opcional). En Vercel, las mismas como variables de entorno.
 
 ## Después de cualquier cambio

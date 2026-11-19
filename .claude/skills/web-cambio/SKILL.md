@@ -30,6 +30,7 @@ Casi todo está en `compania/sitio.json`. No toques `plantilla/` ni `componentes
 | Texto del menú Services | `servicios[].menu` (frase corta, máx. 40 caracteres) |
 | Textos de una página | `servicios[]` (`h1`, `intro`, `ofrece`, `porque`, `faq`, `titulo_seo`, `descripcion_seo`), `hero`, `nosotros`, `finanzas_seguro`, `faq_inicio` |
 | Fotos | Nuevas: `npm run fotos -- "<carpeta>"`, mírala, ponle nombre descriptivo en inglés y pon `archivo` + `alt` en el lugar que va. **Solo fotos reales de sus trabajos.** |
+| Videos | Nuevos: `npm run videos -- "<carpeta>"` (recorta, quita el sonido y los aligera). Van en `hero.video` (fondo de la portada) o `proyectos[].video`. **Solo videos reales de sus trabajos.** |
 | Reseñas | `resenas.lista` — copiadas tal cual de Google. **Nunca inventar.** Actualiza `calificacion` y `total` |
 | Colores | `marca.color`, `marca.color_oscuro`, `marca.tinta` |
 | Fuente | `marca.fuente` (opciones en `plantilla/fuentes.json`). **Nunca Inter, Roboto ni Arial** |

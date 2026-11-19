@@ -81,7 +81,8 @@ Explícale primero qué hace: el cliente pone su dirección, Google mide el tech
 2. Corre `npm run fotos -- "<carpeta>"`: las endereza, les quita el GPS del teléfono, las achica para web y las copia a `compania/fotos/`.
 3. Mira cada foto (ábrela) y escoge la mejor para cada lugar. `npm run revisar` dice qué foto pide cada cuadro ("Foto de muestra"). Ponle a cada una un nombre que describa lo que se ve, en inglés y con la ciudad si se sabe (ej. `architectural-shingle-roof-replacement-cypress-tx.jpg`), y un `alt` en inglés que diga lo que se ve.
 4. Si falta alguna foto, deja el cuadro de muestra y dile cuál falta. **Nunca** la reemplaces con stock.
-5. Las imágenes del estimador (`componentes/estimador/img/`) son de referencia del material, no trabajos de nadie. Si tiene fotos propias de cada material, pueden reemplazarlas.
+5. **Videos (opcional, se ve muy bien):** pídele 1 a 3 videos de **sus** trabajos: dron sobre un techo terminado, la cuadrilla instalando. Corre `npm run videos -- "<carpeta>"`: los recorta a 12 segundos, les quita el sonido, los pasa a colores normales si vienen en HDR y los deja livianos. El mejor va de fondo en la portada (`hero.video`); los demás, en `proyectos[].video`. Si falta ffmpeg, instálalo (Windows: `winget install Gyan.FFmpeg` · Mac: `brew install ffmpeg`). **Nunca videos de stock.**
+6. Las imágenes del estimador (`componentes/estimador/img/`) son de referencia del material, no trabajos de nadie. Si tiene fotos propias de cada material, pueden reemplazarlas.
 
 ### G. Reseñas de Google → `resenas`
 Pídele el link de su perfil de Google. Copia **tal cual** 6 a 10 reseñas reales (nombre como aparece, texto completo, estrellas), la calificación y el total. Si no tiene reseñas, deja la lista vacía (la sección no sale) y anótale de tarea pedirle reseñas a sus últimos 10 clientes.

@@ -76,6 +76,11 @@
       "alt": "Two-story home with a new architectural shingle roof",
       "pide": "Una casa completa con un techo que ustedes terminaron, de día y de frente"
     },
+    "video": {
+      "archivo": "dron-techo-terminado.mp4",
+      "alt": "Drone view of a finished roof replacement",
+      "pide": "Un video de dron de 10 a 15 segundos sobre un techo que ustedes terminaron (opcional; si no hay, se usa la foto)"
+    },
     "confianza": [
       "Free inspections",
       "Fully insured",

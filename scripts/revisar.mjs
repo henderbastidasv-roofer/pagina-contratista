@@ -48,6 +48,13 @@ const avisosBuild = JSON.parse(fs.readFileSync(path.join(DIST, ".avisos.json"), 
 const faltan = avisosBuild.filter((a) => a.startsWith("Falta la foto"));
 if (faltan.length) { ojo(`Faltan ${faltan.length} fotos reales (salen como "Foto de muestra"):`); faltan.forEach((a) => console.log("     · " + a.replace("Falta la foto real: compania/fotos/", ""))); }
 else ok("Todas las fotos son de la compañía.");
+const sinVideo = avisosBuild.filter((a) => a.startsWith("Falta el video"));
+sinVideo.forEach((a) => ojo(a.replace("Falta el video: compania/videos/", "Video opcional que falta: ") + " (mientras tanto sale la foto)."));
+const vdir = path.join(RAIZ, "compania", "videos");
+if (fs.existsSync(vdir)) for (const v of fs.readdirSync(vdir).filter((f) => /\.mp4$/i.test(f))) {
+  const mb = fs.statSync(path.join(vdir, v)).size / 1048576;
+  if (mb > 10) ojo(`El video ${v} pesa ${mb.toFixed(1)} MB: la página va a cargar lento en el celular. Hazlo más corto con npm run videos.`);
+}
 if (!(D.resenas?.lista || []).length) ojo("No hay reseñas: la sección no sale. Copia las reseñas reales de Google (nunca inventarlas).");
 
 console.log("\n— Fuentes, claves y enlaces —");

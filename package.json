@@ -4,13 +4,16 @@
   "private": true,
   "description": "Página web para compañías de techos con estimador por satélite y calculadora de financiamiento. Hecha por Rufero Pro para ConstruIA.",
   "type": "module",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "node plantilla/build.mjs",
     "vista-previa": "node scripts/vista-previa.mjs",
     "revisar": "node scripts/revisar.mjs",
     "claves": "node scripts/claves.mjs",
     "fotos": "node scripts/fotos.mjs",
+    "videos": "node scripts/videos.mjs",
     "publicar": "node scripts/publicar.mjs"
   },
   "devDependencies": {
