@@ -34,6 +34,7 @@ Casi todo está en `compania/sitio.json`. No toques `plantilla/` ni `componentes
 | Colores | `marca.color`, `marca.color_oscuro`, `marca.tinta` |
 | Fuente | `marca.fuente` (opciones en `plantilla/fuentes.json`). **Nunca Inter, Roboto ni Arial** |
 | Logo | `compania/logo/` + `marca.logo` / `marca.logo_blanco` |
+| Landing page para anuncios (`/free-roof-inspection/`) | `landing` (`titulo`, `texto`, `puntos`, `slug`; `activo: false` la apaga). No sale en Google ni en el sitemap |
 | Una página vieja que cambió de dirección | `redirecciones` (`desde` → `hacia`, con barra al final) |
 | Clave de Google | Solo la persona en la Terminal: `npm run claves -- GOOGLE_MAPS_API_KEY`. Nunca en el chat |
 

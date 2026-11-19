@@ -146,7 +146,7 @@ function schema(slug, titulo, desc, faq, miga, servicio) {
 }
 
 // ---------------------------------------------------------------- piezas comunes
-function head({ slug, titulo, desc, faq, miga, servicio, noindex = false, ogFoto, css = [], activo = "" }) {
+function head({ slug, titulo, desc, faq, miga, servicio, noindex = false, ogFoto, css = [], activo = "", sinMenu = false }) {
   const og = ogFoto?.archivo && fs.existsSync(P("compania/fotos", ogFoto.archivo)) ? ogFoto : D.hero.foto;
   const ogImg = og?.archivo && fs.existsSync(P("compania/fotos", og.archivo)) ? `<meta property="og:image" content="${DOM}/img/${esc(og.archivo)}">` : "";
   const icono = archivoMarca(M.icono) ? `/${M.icono}` : "/favicon.svg";
@@ -175,7 +175,7 @@ ${medicion()}
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-${header(activo)}
+${sinMenu ? headerLanding() : header(activo)}
 `;
 }
 
@@ -200,6 +200,15 @@ function header(activo) {
  </div>
 </div></header>
 <nav class="mnav" id="mnav" aria-label="Mobile menu"><a href="/">Home</a><a href="/about-us/">About Us</a>${msub}<a href="/#projects">Projects</a>${EST ? '<a href="/roof-estimate/">Roof Estimator</a>' : ""}<a href="/finance-insurance/">${FIN ? "Finance &amp; Insurance" : "Insurance Claims"}</a><a href="/contact-us/">Contact</a><a class="btn" href="tel:${tel}">${ico("phone")} Call ${esc(C.telefono)}</a></nav>
+`;
+}
+
+// Encabezado de la landing page: solo logo, teléfono y botón (sin menú, para que el cliente no se vaya).
+function headerLanding() {
+  return `<header class="header"><div class="header-in">
+ <span class="logo">${logoHTML()}</span>
+ <div class="head-cta"><a class="head-tel" href="tel:${tel}">${ico("phone")}<span>${esc(C.telefono)}</span></a><a class="btn sm" href="#lp-form">Free Inspection</a></div>
+</div></header>
 `;
 }
 
@@ -577,6 +586,48 @@ ${pageHero("Contact Us", "Get in Touch With Us", "Need a roof inspection, a stor
   escribirPagina(slug, html);
 }
 
+// ================================================================ LANDING PAGE PARA ANUNCIOS
+// Sin menú, con el formulario arriba y el estimador. No sale en Google (noindex) ni en el sitemap: es a donde mandan los anuncios.
+function landing() {
+  const L = D.landing;
+  if (!L?.activo) return;
+  const f = formAccion();
+  const opts = svcActivos.map((s) => `<option>${esc(s.nombre)}</option>`).join("");
+  const html = head({ slug: L.slug, titulo: tok(L.titulo_seo || L.titulo), desc: tok(L.texto), noindex: true, css: [...cssEst], sinMenu: true }) + `<main id="main">
+<section class="hero lp" aria-label="Free inspection"><div class="hero-in">
+ ${foto(L.foto || D.hero.foto, "hero-bg", false)}
+ <div class="hero-copy">
+  <p class="eyebrow">${esc(tok(L.eyebrow || D.hero.eyebrow))}</p>
+  <h1>${tok(L.titulo)}</h1>
+  <p>${esc(tok(L.texto))}</p>
+  <ul class="lp-puntos">${(L.puntos || []).map((x) => `<li>${esc(tok(x))}</li>`).join("")}</ul>
+  <div class="hero-btns"><a class="btn white" href="tel:${tel}">${ico("phone")} ${esc(C.telefono)}</a></div>
+ </div>
+ <form class="form lp-form" id="lp-form" action="${f.action}" method="POST">
+  <h3>${esc(tok(L.titulo_form || "Book your free inspection"))}</h3>
+  <p class="hint">We'll call you back ${esc(L.respuesta || "as soon as possible")}.</p>
+  ${f.ocultos.replace(/New website request/g, "New landing page lead")}
+  <input type="hidden" name="Page" value="${esc(L.slug)}">
+  <label for="lp-name">Full name *</label><input id="lp-name" name="Name" required autocomplete="name">
+  <label for="lp-phone">Phone *</label><input id="lp-phone" name="Phone" type="tel" required autocomplete="tel">
+  <label for="lp-addr">Property address *</label><input id="lp-addr" name="Address" required autocomplete="street-address">
+  <label for="lp-svc">What do you need?</label><select id="lp-svc" name="Service"><option>Free roof inspection</option>${opts}<option>Other</option></select>
+  <button class="btn" type="submit"><span>Get My Free Inspection</span>${ico("arrow-right")}</button>
+  <p class="fine">By sending this form you agree to be contacted by ${esc(C.nombre)} about your request. See our <a href="/privacy-policy/">privacy policy</a>.</p>
+ </form>
+</div></section>
+${seccionResenas()}
+${credenciales()}
+${EST ? `<section class="sec soft" id="estimate" aria-labelledby="est-h">${estSeccion()}</section>` : ""}
+<section class="sec" aria-labelledby="faq-h"><div class="wrap">${titulo("FAQ", "Questions, Answered", "faq-h")}${faqHTML(D.faq_inicio.slice(0, 4))}</div></section>
+</main>
+<footer class="footer lp-footer"><div class="f-bottom"><span>© ${new Date().getFullYear()} ${esc(C.legal || C.nombre)}</span><span><a href="/privacy-policy/">Privacy Policy</a></span></div></footer>
+<div class="callbar"><a class="c1" href="tel:${tel}">${ico("phone")}Call now</a><a class="c2" href="#lp-form">${ico("calc")}Free inspection</a></div>
+<script src="/site.js?v=${VER}" defer></script>
+</body></html>`;
+  escribirPagina(L.slug, html);
+}
+
 function gracias() {
   const html = head({ slug: "thank-you", titulo: `Thank You | ${C.nombre}`, desc: `Thanks for contacting ${C.nombre}. We'll get back to you soon.`, noindex: true }) + `<main id="main" class="prose" style="min-height:55vh">
  <span class="eyebrow red">Message received</span>
@@ -684,6 +735,7 @@ finanzasSeguro();
 paginaEstimado();
 nosotros();
 paginaContacto();
+landing();
 gracias();
 privacidad();
 pagina404();

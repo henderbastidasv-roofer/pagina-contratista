@@ -561,6 +561,23 @@
     "estimador_plazo": 120,
     "aviso_legal": "This calculator is for informational purposes only. It is not an offer of credit or a loan approval. Estimated payments use the project cost, the credit range and term you choose, and an assumed APR; actual rates, terms and approval are set by the lender. {COMPANIA} is not a lender and does not originate loans."
   },
+  "landing": {
+    "_nota": "Página para anuncios (Meta, Google): sin menú, con el formulario arriba y el estimador. No sale en Google ni en el sitemap. Se manda el tráfico de los anuncios a /free-roof-inspection/.",
+    "activo": true,
+    "slug": "free-roof-inspection",
+    "eyebrow": "Free roof inspection · Greater Houston",
+    "titulo": "Free Roof Inspection<br>in {CIUDAD} and Nearby",
+    "titulo_seo": "Free Roof Inspection in {CIUDAD} | {COMPANIA}",
+    "texto": "Leaks, missing shingles or storm damage? We'll inspect your roof for free, show you photos of what we find and give you a written estimate.",
+    "puntos": [
+      "Free inspection with photos",
+      "Written estimate, no pressure",
+      "Insurance claim help",
+      "Se habla español"
+    ],
+    "titulo_form": "Book your free inspection",
+    "respuesta": "within one business day"
+  },
   "proyectos": [
     {
       "archivo": "proyecto-antes-1.jpg",

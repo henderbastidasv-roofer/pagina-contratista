@@ -1,5 +1,7 @@
 # Classroom "Página Web y mantenimiento" (ConstruIA)
 
+> Guion y mapa del video (15 bloques, Hender en pantalla con un mapa de Excalidraw): están en la carpeta de ConstruIA de Rufero Pro, no en este repo.
+
 Lo que sale de este repo para cada lección. Compañía de ejemplo de los videos: **Techos Ejemplo LLC** (Houston, TX).
 
 | # | Lección | Qué se usa de este repo | Estado |
@@ -10,7 +12,7 @@ Lo que sale de este repo para cada lección. Compañía de ejemplo de los videos
 | 3 | Construir con la plantilla | `PROMPT-PARA-PEGAR.md` → `INSTALAR.md` → `compania/sitio.json`, `npm run fotos`, `npm run vista-previa` | Listo en el repo |
 | 3b | El estimador de techos | `componentes/estimador/` + `docs/GOOGLE-MAPS.md`: precios por square, materiales, clave de Google restringida, modo manual | Listo en el repo |
 | 3c | La calculadora de financiamiento | `componentes/financiamiento/`: niveles de crédito/APR, plazos, montos, link de precalificación, aviso legal | Listo en el repo |
-| 4 | Que te traiga clientes (formularios, pixel, landing pages) | `leads.correo` / `WEB3FORMS_KEY`, `medicion.ga4`, `medicion.meta_pixel` (el estimador y el formulario disparan `generate_lead` y `Lead`) | Formularios y pixel listos; landing pages por hacer |
+| 4 | Que te traiga clientes (formularios, pixel, landing pages) | `leads.correo` / `WEB3FORMS_KEY`, `medicion.ga4`, `medicion.meta_pixel` (el estimador y el formulario disparan `generate_lead` y `Lead`) | Listo: formularios, pixel, GA4 y landing `/free-roof-inspection/` |
 | 5 | Publicar en GitHub y Vercel con su dominio | `npm run publicar`, `vercel.json` (lo escribe el build), variables de entorno en Vercel, conectar dominio | Script listo, sin probar en una cuenta real |
 | 6 | Google: GBP, Search Console y SEO local | `medicion.search_console`, `sitemap.xml`, schema `RoofingContractor`, `llms.txt`, títulos y descripciones por ciudad | Base lista; guía por escribir |
 | 7 | Mantenimiento con IA | Skill `/web-cambio` (listo) · `/web-revision-mensual` (por hacer: `npm run revisar` + leads + Google) | `/web-cambio` listo |
