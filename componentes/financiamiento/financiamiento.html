@@ -1,0 +1,30 @@
+<!-- Calculadora de financiamiento (componente de pagina-contratista). La configuración llega en window.FINANCIAMIENTO (la escribe build.mjs). -->
+<div class="financing-calc" id="financingCalc">
+  <h2>Financing Calculator</h2>
+  <div class="calc-divider"></div>
+
+  <label for="calc-cost">Project cost</label>
+  <input type="text" id="calc-cost" value="{{MONTO_INICIAL}}" inputmode="numeric" autocomplete="off">
+  <p class="calc-range" id="calc-range">Projects from {{MONTO_MIN}} to {{MONTO_MAX}}</p>
+
+  <label for="calc-credit">Your credit score</label>
+  <select id="calc-credit">{{OPCIONES_CREDITO}}</select>
+
+  <label for="calc-term">Loan term</label>
+  <select id="calc-term">{{OPCIONES_PLAZO}}</select>
+
+  <p class="estimated-label">Estimated payment</p>
+  <p class="monthly-amount" id="calc-monthly" aria-live="polite">$0.00 <span>/ mo.</span></p>
+  <p class="calc-apr" id="calc-apr"></p>
+
+  <div class="breakdown">
+    <div class="breakdown-row"><span>Principal</span><span id="calc-principal">$0.00</span></div>
+    <div class="breakdown-row"><span>Interest</span><span id="calc-interest">$0.00</span></div>
+    <div class="breakdown-row total"><span>Total loan cost estimate</span><span id="calc-total">$0.00</span></div>
+  </div>
+
+  {{BOTON_PRECALIFICAR}}
+  <a href="{{LINK_CITA}}" class="cta-button {{CLASE_CITA}}">{{TEXTO_CITA}} →</a>
+
+  <p class="disclaimer">{{AVISO_LEGAL}}</p>
+</div>

@@ -1,0 +1,27 @@
+{
+  "_LEEME": "Fuentes permitidas (todas de Google Fonts). PROHIBIDAS en cualquier parte: Inter, Roboto y Arial, tampoco como reserva en el CSS. Para agregar otra, ponla aquí con su link de Google Fonts y revisa que no sea una de esas. Predeterminada: archivo (elegida por Hender para Techos Ejemplo, 2026-11-19).",
+  "archivo": {
+    "nombre": "Archivo Expanded + Archivo",
+    "carácter": "Industrial y ancho, como letrero de obra. Parecida a las letras anchas de las páginas de roofing grandes.",
+    "google": "family=Archivo:wdth,wght@62..125,400..900",
+    "titulos": "\"Archivo\"", "texto": "\"Archivo\"", "ancho_titulos": "120%", "peso_titulos": 800, "mayusculas": false
+  },
+  "bricolage": {
+    "nombre": "Bricolage Grotesque",
+    "carácter": "Moderna y con personalidad, un poco artesanal.",
+    "google": "family=Bricolage+Grotesque:opsz,wght@12..96,300..800",
+    "titulos": "\"Bricolage Grotesque\"", "texto": "\"Bricolage Grotesque\"", "ancho_titulos": "100%", "peso_titulos": 700, "mayusculas": false
+  },
+  "big-shoulders": {
+    "nombre": "Big Shoulders Display + Figtree",
+    "carácter": "Titulares altos y fuertes en mayúsculas, estilo industrial de Chicago; texto limpio y amable.",
+    "google": "family=Big+Shoulders+Display:wght@600..900&family=Figtree:wght@400..800",
+    "titulos": "\"Big Shoulders Display\"", "texto": "\"Figtree\"", "ancho_titulos": "100%", "peso_titulos": 800, "mayusculas": true
+  },
+  "fraunces": {
+    "nombre": "Fraunces + Instrument Sans",
+    "carácter": "Titulares con serifa, cálidos y de compañía familiar con años; texto moderno.",
+    "google": "family=Fraunces:opsz,wght@9..144,500..800&family=Instrument+Sans:wght@400..700",
+    "titulos": "\"Fraunces\"", "texto": "\"Instrument Sans\"", "ancho_titulos": "100%", "peso_titulos": 700, "mayusculas": false
+  }
+}

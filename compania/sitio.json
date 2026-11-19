@@ -1,0 +1,671 @@
+{
+  "_LEEME": "Datos de la compañía. Este archivo lo llena Claude Code en la entrevista (INSTALAR.md). Los textos de la página van en inglés (los ven los clientes). No inventar datos: si algo no se sabe, se deja vacío y esa parte no sale en la página. Las claves (Google, Web3Forms) NUNCA van aquí: van en .env con npm run claves.",
+  "compania": {
+    "nombre": "Techos Ejemplo",
+    "legal": "Techos Ejemplo LLC",
+    "dueno": "Carlos Pérez",
+    "telefono": "(832) 555-0100",
+    "correo": "info@techosejemplo.com",
+    "dominio": "https://techosejemplo.com",
+    "direccion": {
+      "calle": "",
+      "ciudad": "Houston",
+      "estado": "TX",
+      "zip": "77070",
+      "mostrar": false
+    },
+    "horario": "Mon–Sat, 7 AM – 7 PM",
+    "fundada": "",
+    "licencia": "",
+    "lema": "Roofs Built Right. Promises Kept.",
+    "idiomas": [
+      "English",
+      "Spanish"
+    ],
+    "redes": {
+      "facebook": "",
+      "instagram": "",
+      "google": "",
+      "youtube": "",
+      "tiktok": ""
+    }
+  },
+  "zona": {
+    "ciudad_base": "Houston",
+    "estado": "TX",
+    "estado_nombre": "Texas",
+    "region": "Greater Houston",
+    "ciudades": [
+      "Houston",
+      "Cypress",
+      "Katy",
+      "Tomball",
+      "Spring",
+      "The Woodlands"
+    ],
+    "mapa_centro": {
+      "lat": 29.7604,
+      "lng": -95.3698,
+      "zoom": 10
+    }
+  },
+  "marca": {
+    "color": "#c2410c",
+    "color_oscuro": "#9a3412",
+    "tinta": "#1c1917",
+    "fuente": "archivo",
+    "logo": "",
+    "logo_blanco": "",
+    "icono": ""
+  },
+  "leads": {
+    "_nota": "Correo que recibe los formularios y el estimador. Con WEB3FORMS_KEY en .env se usa Web3Forms; si no, FormSubmit (el primer envío manda un correo de activación). Vacío en el ejemplo para que la vista previa no mande nada a nadie.",
+    "correo": ""
+  },
+  "medicion": {
+    "ga4": "",
+    "meta_pixel": "",
+    "search_console": ""
+  },
+  "hero": {
+    "eyebrow": "Houston · Cypress · Katy · TX",
+    "titulo": "Roofs Built Right.<br>Promises Kept.",
+    "texto": "Roof replacements, repairs and storm restoration for homes and businesses across Greater Houston — with a free inspection and an honest answer.",
+    "foto": {
+      "archivo": "casa-techo-nuevo.jpg",
+      "alt": "Two-story home with a new architectural shingle roof",
+      "pide": "Una casa completa con un techo que ustedes terminaron, de día y de frente"
+    },
+    "confianza": [
+      "Free inspections",
+      "Fully insured",
+      "Se habla español",
+      "Written warranty"
+    ]
+  },
+  "credenciales": [
+    {
+      "titulo": "Fully insured",
+      "detalle": "General liability & workers' comp",
+      "imagen": "",
+      "url": ""
+    },
+    {
+      "titulo": "Free inspections",
+      "detalle": "No obligation, no pressure",
+      "imagen": "",
+      "url": ""
+    },
+    {
+      "titulo": "Se habla español",
+      "detalle": "We serve you in English or Spanish",
+      "imagen": "",
+      "url": ""
+    },
+    {
+      "titulo": "Written warranty",
+      "detalle": "On every roof replacement",
+      "imagen": "",
+      "url": ""
+    }
+  ],
+  "nosotros": {
+    "eyebrow": "Family owned. Locally trusted.",
+    "titulo": "A Local Roofer Who Picks Up the Phone",
+    "parrafos": [
+      "Techos Ejemplo LLC is a family-owned roofing company in Houston, Texas, run by owner Carlos Pérez. We help homeowners and businesses across Greater Houston with roof replacements, repairs and storm restoration.",
+      "Every job starts with a free inspection and a clear, written estimate. We explain what we find in plain English or Spanish, and we leave your property clean when we're done."
+    ],
+    "valores": [
+      [
+        "Honest inspections",
+        "If your roof only needs a repair, we tell you."
+      ],
+      [
+        "Clear estimates",
+        "Written, line by line, with no surprises."
+      ],
+      [
+        "Clean job sites",
+        "Magnetic sweep and full cleanup every day."
+      ],
+      [
+        "Real warranty",
+        "Manufacturer and workmanship warranty in writing."
+      ]
+    ],
+    "foto": {
+      "archivo": "dueno-en-el-techo.jpg",
+      "alt": "Owner of Techos Ejemplo on a finished roof",
+      "pide": "El dueño o el equipo arriba de un techo terminado, con la camisa de la compañía"
+    },
+    "foto2": {
+      "archivo": "equipo-trabajando.jpg",
+      "alt": "Techos Ejemplo crew removing old shingles",
+      "pide": "La cuadrilla trabajando en un reemplazo (tear-off o instalando shingles)"
+    }
+  },
+  "servicios": [
+    {
+      "slug": "residential-roofing",
+      "activo": true,
+      "nombre": "Residential Roofing",
+      "corto": "Shingle, metal and tile roof replacements that protect your home and boost curb appeal.",
+      "menu": "New roofs that protect your home",
+      "foto": {
+        "archivo": "reemplazo-residencial.jpg",
+        "alt": "Home with a new architectural shingle roof",
+        "pide": "Una casa con techo nuevo de shingles terminado por ustedes"
+      },
+      "titulo_seo": "Residential Roofing in Houston, TX | Techos Ejemplo",
+      "descripcion_seo": "Roof replacement, repairs and inspections for Houston homes. Free inspection and instant online estimate. Call (832) 555-0100.",
+      "h1": "Residential roofing in Houston, TX",
+      "intro": "Your home deserves a roof that looks great and holds up to Texas heat, wind and hail. We install, repair and replace residential roofs across Greater Houston — with a free inspection and a written estimate first.",
+      "ofrece": [
+        "Full roof replacement with architectural shingles, metal or tile",
+        "Roof repairs: leaks, flashing, vents and missing shingles",
+        "Free roof inspections with photos",
+        "Storm damage restoration and insurance claim help",
+        "Gutters and ventilation done right"
+      ],
+      "porque": [
+        "Free, no-obligation inspections",
+        "Written estimates with no surprises",
+        "Fully insured crews",
+        "We serve you in English or Spanish",
+        "Clean job site every day"
+      ],
+      "galeria": [
+        {
+          "archivo": "residencial-1.jpg",
+          "alt": "New shingle roof on a Houston home",
+          "pide": "Otra casa terminada (otro ángulo o color)"
+        },
+        {
+          "archivo": "residencial-2.jpg",
+          "alt": "Finished ridge on an architectural shingle roof",
+          "pide": "Un detalle bien hecho: ridge, valley o flashing"
+        },
+        {
+          "archivo": "residencial-3.jpg",
+          "alt": "Crew installing shingles",
+          "pide": "El equipo instalando"
+        }
+      ],
+      "faq": [
+        [
+          "How long does a roof replacement take?",
+          "Most homes are done in one or two days, depending on size, material and weather. You get the schedule in writing before we start."
+        ],
+        [
+          "What roofing materials do you install?",
+          "Architectural and designer shingles, standing seam metal and more. We'll go over what fits your home and budget during the inspection."
+        ],
+        [
+          "Do you offer free estimates?",
+          "Yes. Book a free inspection or get a starting price range in about a minute with our online roof estimator."
+        ]
+      ]
+    },
+    {
+      "slug": "commercial-roofing",
+      "activo": true,
+      "nombre": "Commercial Roofing",
+      "corto": "TPO, metal and flat roofs for offices, warehouses and retail — with minimal downtime.",
+      "menu": "TPO, metal and flat roofs",
+      "foto": {
+        "archivo": "comercial.jpg",
+        "alt": "Commercial flat roof with a new TPO membrane",
+        "pide": "Un techo comercial o plano que ustedes hicieron (TPO, metal, modified bitumen)"
+      },
+      "titulo_seo": "Commercial Roofing in Houston, TX | Techos Ejemplo",
+      "descripcion_seo": "Commercial roof replacement, repair and maintenance in Houston: TPO, metal and flat roofs. Free inspection. Call (832) 555-0100.",
+      "h1": "Commercial roofing in Houston, TX",
+      "intro": "Your building can't afford leaks or long shutdowns. We replace, repair and maintain commercial roofs across Greater Houston and plan the work around your business.",
+      "ofrece": [
+        "TPO and single-ply membrane roofs",
+        "Metal roof replacement and repair",
+        "Flat and low-slope roof repairs",
+        "Roof maintenance plans",
+        "Storm damage assessments"
+      ],
+      "porque": [
+        "Work scheduled around your business hours",
+        "Clear scope and written estimates",
+        "Fully insured crews",
+        "Photo reports after every visit",
+        "Fast response for leaks"
+      ],
+      "galeria": [
+        {
+          "archivo": "comercial-1.jpg",
+          "alt": "TPO roof seams being welded",
+          "pide": "Detalle de una membrana comercial instalada"
+        },
+        {
+          "archivo": "comercial-2.jpg",
+          "alt": "Metal roof on a commercial building",
+          "pide": "Un edificio comercial terminado"
+        },
+        {
+          "archivo": "comercial-3.jpg",
+          "alt": "Crew working on a flat roof",
+          "pide": "El equipo en un techo plano"
+        }
+      ],
+      "faq": [
+        [
+          "What commercial roofs do you work on?",
+          "TPO and other single-ply membranes, metal and flat or low-slope roofs on offices, warehouses and retail buildings."
+        ],
+        [
+          "Can you work without shutting down my business?",
+          "Yes. We plan the schedule with you to keep noise and downtime to a minimum."
+        ],
+        [
+          "Do you offer maintenance plans?",
+          "Yes. Regular inspections and small repairs help your roof last longer and prevent big leaks."
+        ]
+      ]
+    },
+    {
+      "slug": "roof-repair",
+      "activo": true,
+      "nombre": "Roof Repair",
+      "corto": "Leaks, flashing, vents and missing shingles — found, explained and fixed right.",
+      "menu": "Leaks and damage, fixed right",
+      "foto": {
+        "archivo": "reparacion.jpg",
+        "alt": "Roof repair around a vent pipe",
+        "pide": "Una reparación: flashing, pipe jack o shingles cambiados"
+      },
+      "titulo_seo": "Roof Repair & Free Roof Inspections in Houston | Techos Ejemplo",
+      "descripcion_seo": "Roof leak repair, flashing, vents and missing shingles in Houston, TX. Free, no-obligation roof inspections. Call (832) 555-0100.",
+      "h1": "Roof repair & free roof inspections",
+      "intro": "A small leak can turn into a big problem fast. We find the source, show you photos, explain it clearly and fix it right — and if your roof is fine, we'll tell you that too.",
+      "ofrece": [
+        "Roof leak repair",
+        "Flashing around chimneys, walls and skylights",
+        "Pipe jacks, vents and ridge caps",
+        "Missing or damaged shingles",
+        "Free inspections with photos"
+      ],
+      "porque": [
+        "Free, no-obligation inspections",
+        "Photos of everything we find",
+        "Honest repair-or-replace advice",
+        "Fast response for active leaks",
+        "Fully insured crews"
+      ],
+      "galeria": [
+        {
+          "archivo": "reparacion-1.jpg",
+          "alt": "Shingles replaced on a roof repair",
+          "pide": "Antes o después de una reparación"
+        },
+        {
+          "archivo": "reparacion-2.jpg",
+          "alt": "New flashing on a roof",
+          "pide": "Flashing nuevo bien instalado"
+        },
+        {
+          "archivo": "reparacion-3.jpg",
+          "alt": "Roofer inspecting a roof",
+          "pide": "Alguien de la compañía haciendo una inspección"
+        }
+      ],
+      "faq": [
+        [
+          "Do you charge for roof inspections?",
+          "No. Inspections are free and there's no obligation to hire us."
+        ],
+        [
+          "Can you fix a leak without replacing the roof?",
+          "Often, yes. Many leaks come from flashing, vents or a few damaged shingles. We'll recommend a repair when a repair is the right call."
+        ],
+        [
+          "How fast can you come out?",
+          "Call (832) 555-0100 and we'll get you on the schedule as soon as possible. Active leaks get priority."
+        ]
+      ]
+    },
+    {
+      "slug": "after-storm-damage",
+      "activo": true,
+      "nombre": "Storm Damage Restoration",
+      "corto": "Fast help after hail and wind: emergency tarping, documentation for your claim and repairs.",
+      "menu": "Hail, wind and emergency tarping",
+      "foto": {
+        "archivo": "tormenta.jpg",
+        "alt": "Roof with storm damage before repair",
+        "pide": "Un techo dañado por granizo o viento que ustedes repararon"
+      },
+      "titulo_seo": "Storm Damage Roof Repair in Houston | Techos Ejemplo",
+      "descripcion_seo": "Hail and wind damage roof repair in Houston, TX. Emergency tarping, photo documentation for your insurance claim and full restoration. Call (832) 555-0100.",
+      "h1": "Storm damage roof repair & emergency tarping",
+      "intro": "When hail or high winds hit, fast action prevents bigger damage. We tarp, document the damage with photos and repair or replace what the storm left behind.",
+      "ofrece": [
+        "Emergency tarping to stop leaks",
+        "Hail and wind damage inspections",
+        "Photo documentation for your insurance claim",
+        "Repairs or full replacement",
+        "Debris cleanup"
+      ],
+      "porque": [
+        "Fast response after storms",
+        "Experience with insurance claims",
+        "Honest damage assessments",
+        "We never promise what your insurance will pay",
+        "Fully insured crews"
+      ],
+      "galeria": [
+        {
+          "archivo": "tormenta-1.jpg",
+          "alt": "Hail damage on shingles",
+          "pide": "Daño de granizo marcado en una inspección"
+        },
+        {
+          "archivo": "tormenta-2.jpg",
+          "alt": "Emergency tarp on a roof",
+          "pide": "Un tarp de emergencia puesto por ustedes"
+        },
+        {
+          "archivo": "tormenta-3.jpg",
+          "alt": "Roof restored after a storm",
+          "pide": "El mismo techo ya reparado"
+        }
+      ],
+      "faq": [
+        [
+          "What should I do right after a storm damages my roof?",
+          "Stay safe and off the roof. Take photos from the ground if you can, then call us. We can tarp the damage to stop leaks and document everything for your insurance company."
+        ],
+        [
+          "Do you offer emergency tarping?",
+          "Yes. Temporary protection keeps water out until permanent repairs are made."
+        ],
+        [
+          "Will my insurance pay for a new roof?",
+          "It depends on your policy and the cause of the damage. We document the damage and help you understand the process, but the decision belongs to your insurance company."
+        ]
+      ]
+    }
+  ],
+  "finanzas_seguro": {
+    "titulo_seo": "Roof Financing & Insurance Claims | Techos Ejemplo, Houston TX",
+    "descripcion_seo": "Estimate your monthly payment for a new roof and get help with storm damage insurance claims. Techos Ejemplo, Houston, TX.",
+    "h1": "Roof financing & insurance claims",
+    "intro": "A new roof is a big expense. Estimate your monthly payment in seconds, and if a storm caused the damage, we'll document it for your insurance claim.",
+    "foto": {
+      "archivo": "inspeccion-seguro.jpg",
+      "alt": "Roof inspection photos taken for an insurance claim",
+      "pide": "Una inspección con fotos de daño (para el seguro)"
+    },
+    "seguro": [
+      "Free storm damage inspection with photos",
+      "Documentation and estimates to support your claim",
+      "We can meet your adjuster on the roof",
+      "Clear explanation of what's covered and what's out of pocket"
+    ],
+    "faq": [
+      [
+        "Will checking my rate affect my credit score?",
+        "Most financing partners pre-qualify you with a soft credit check, which doesn't affect your score. Ask us about the partner we work with."
+      ],
+      [
+        "How long are the payment terms?",
+        "Terms depend on the lender and the amount — the calculator shows common options from 3 to 15 years."
+      ],
+      [
+        "Do you help with insurance claims?",
+        "Yes. We inspect, document the damage with photos and help you understand the process. Your insurance company decides what's covered."
+      ]
+    ]
+  },
+  "estimador": {
+    "activo": true,
+    "_nota_precios": "Precios POR SQUARE (100 pies²) instalados, rango bajo y alto. El estimador los divide entre 100 para sacar el precio por pie². Ejemplo inventado: cada compañía pone los suyos.",
+    "materiales": [
+      {
+        "id": "arch",
+        "nombre": "Architectural Shingles",
+        "precio_square": [
+          450,
+          575
+        ],
+        "tipos": [
+          "residential"
+        ],
+        "img": "/estimador/img/architectural-shingles.jpg",
+        "desc": "Dimensional asphalt shingles with a high-end look, strong wind ratings and a long manufacturer warranty. The most popular choice for Houston homes."
+      },
+      {
+        "id": "designer",
+        "nombre": "Designer Shingles",
+        "precio_square": [
+          650,
+          850
+        ],
+        "tipos": [
+          "residential"
+        ],
+        "img": "/estimador/img/asphalt-shingle-roof.jpg",
+        "desc": "Premium asphalt shingles that mimic slate or wood shake, with extra thickness and curb appeal."
+      },
+      {
+        "id": "standing-seam",
+        "nombre": "Standing Seam Metal",
+        "precio_square": [
+          1050,
+          1450
+        ],
+        "tipos": [
+          "residential",
+          "commercial"
+        ],
+        "img": "/estimador/img/metal-roof.jpg",
+        "desc": "A premium metal roof with hidden fasteners and a clean, modern look. Built to last decades."
+      },
+      {
+        "id": "tpo",
+        "nombre": "TPO",
+        "precio_square": [
+          700,
+          1300
+        ],
+        "tipos": [
+          "commercial"
+        ],
+        "img": "/estimador/img/tpo-commercial.jpg",
+        "desc": "A single-ply membrane for flat and low-slope commercial roofs. Energy efficient and resistant to UV and heat."
+      }
+    ],
+    "materiales_actuales": {
+      "residential": [
+        "asphalt",
+        "metal",
+        "tile",
+        "slate"
+      ],
+      "commercial": [
+        "metal",
+        "tpo",
+        "pvc",
+        "modified-bitumen"
+      ]
+    },
+    "pendientes": {
+      "flat": 1.0,
+      "low": 1.05,
+      "moderate": 1.15,
+      "steep": 1.3
+    },
+    "comercial": true,
+    "mult_comercial": 1.15,
+    "tamano_por_defecto_sqft": 2200,
+    "tamanos_sin_mapa": [
+      [
+        "Under 1,500 sq ft",
+        1800
+      ],
+      [
+        "1,500 – 2,500 sq ft",
+        2600
+      ],
+      [
+        "2,500 – 3,500 sq ft",
+        3600
+      ],
+      [
+        "Over 3,500 sq ft",
+        4600
+      ]
+    ],
+    "mostrar_todos": true,
+    "aviso": "This is only an estimate. Final prices depend on an on-site inspection, roof condition, layers to remove, decking and local code requirements."
+  },
+  "financiamiento": {
+    "activo": true,
+    "socio": "",
+    "link_precalificacion": "",
+    "monto_min": 2500,
+    "monto_max": 100000,
+    "monto_inicial": 15000,
+    "niveles_credito": [
+      [
+        "Excellent (740+)",
+        7.99
+      ],
+      [
+        "Good (670 - 739)",
+        10.99
+      ],
+      [
+        "Fair (580 - 669)",
+        15.99
+      ],
+      [
+        "Building credit (below 580)",
+        21.99
+      ]
+    ],
+    "plazos_meses": [
+      36,
+      60,
+      84,
+      120,
+      180
+    ],
+    "plazo_inicial": 120,
+    "estimador_nivel": 1,
+    "estimador_plazo": 120,
+    "aviso_legal": "This calculator is for informational purposes only. It is not an offer of credit or a loan approval. Estimated payments use the project cost, the credit range and term you choose, and an assumed APR; actual rates, terms and approval are set by the lender. {COMPANIA} is not a lender and does not originate loans."
+  },
+  "proyectos": [
+    {
+      "archivo": "proyecto-antes-1.jpg",
+      "alt": "Home before roof replacement",
+      "etiqueta": "Before",
+      "titulo": "Tear-off day",
+      "lugar": "Cypress, TX",
+      "pide": "ANTES de un reemplazo (techo viejo o tear-off)"
+    },
+    {
+      "archivo": "proyecto-despues-1.jpg",
+      "alt": "Same home after a new roof",
+      "etiqueta": "After",
+      "titulo": "New architectural shingles",
+      "lugar": "Cypress, TX",
+      "pide": "DESPUÉS del mismo techo, mismo ángulo"
+    },
+    {
+      "archivo": "proyecto-2.jpg",
+      "alt": "New metal roof on a home",
+      "etiqueta": "",
+      "titulo": "Standing seam metal",
+      "lugar": "Katy, TX",
+      "pide": "Otro proyecto terminado"
+    },
+    {
+      "archivo": "proyecto-3.jpg",
+      "alt": "Commercial roof replacement",
+      "etiqueta": "",
+      "titulo": "Commercial TPO",
+      "lugar": "Houston, TX",
+      "pide": "Un proyecto comercial"
+    }
+  ],
+  "proceso": [
+    {
+      "titulo": "Free inspection",
+      "texto": "We check your roof, take photos and explain what we find.",
+      "foto": {
+        "archivo": "paso-inspeccion.jpg",
+        "alt": "Roofer inspecting shingles",
+        "pide": "Alguien inspeccionando un techo"
+      }
+    },
+    {
+      "titulo": "Clear written estimate",
+      "texto": "You get a line-by-line estimate and the options that fit your budget.",
+      "foto": {
+        "archivo": "paso-estimado.jpg",
+        "alt": "Roofer explaining an estimate to a homeowner",
+        "pide": "Explicándole el estimado a un cliente (o el estimado en una tablet)"
+      }
+    },
+    {
+      "titulo": "Install & clean up",
+      "texto": "Our crew installs your roof and leaves your property clean.",
+      "foto": {
+        "archivo": "paso-instalacion.jpg",
+        "alt": "Crew installing a new roof",
+        "pide": "El equipo instalando y limpiando"
+      }
+    }
+  ],
+  "resenas": {
+    "_nota": "Solo reseñas reales, copiadas tal cual de Google. Si no hay, la sección no sale. Nunca inventar reseñas.",
+    "google_url": "",
+    "calificacion": null,
+    "total": null,
+    "lista": []
+  },
+  "faq_inicio": [
+    [
+      "Do you offer free roof inspections?",
+      "Yes. Inspections and estimates are free with no obligation. You can also get a starting price range in about a minute with our online roof estimator."
+    ],
+    [
+      "How accurate is the online roof estimate?",
+      "It gives you a starting price range based on your roof size, slope and the material you choose. The final price is confirmed after a free on-site inspection."
+    ],
+    [
+      "Do you help with insurance claims?",
+      "Yes. We document storm damage with photos and estimates to support your claim. Your insurance company decides what's covered."
+    ],
+    [
+      "Do you offer financing?",
+      "Yes. Use our financing calculator to estimate your monthly payment, then ask us about the options for your project."
+    ],
+    [
+      "What areas do you serve?",
+      "We're based in Houston and serve Cypress, Katy, Tomball, Spring, The Woodlands and the rest of Greater Houston."
+    ],
+    [
+      "¿Hablan español?",
+      "Sí. Atendemos en español y en inglés, desde la inspección hasta el final del trabajo."
+    ]
+  ],
+  "cta_final": "Let's Build a Roof You Can Count On",
+  "redirecciones": [
+    {
+      "desde": "/roof-estimator/",
+      "hacia": "/roof-estimate/"
+    },
+    {
+      "desde": "/contact/",
+      "hacia": "/contact-us/"
+    }
+  ]
+}

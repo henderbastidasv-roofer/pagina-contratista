@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.vercel/
+.env
+.env.*
+!.env.ejemplo
+
+# fotos originales sin procesar (pesadas): solo se suben las de compania/fotos/
+compania/fotos-originales/
+
+# capturas para revisar (no son parte de la plantilla)
+docs/capturas/

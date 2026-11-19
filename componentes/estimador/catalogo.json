@@ -1,0 +1,24 @@
+{
+  "_LEEME": "Catálogo del estimador. 'actuales' = lo que el cliente puede tener hoy en el techo (paso 'What is currently on your roof?'). 'materiales' = materiales que una compañía puede ofrecer, con su foto y descripción por defecto. En compania/sitio.json cada compañía elige los suyos y pone SUS precios. Las fotos de img/ son de referencia del material (no son trabajos de nadie): la compañía puede cambiarlas por fotos propias.",
+  "actuales": {
+    "asphalt": { "nombre": "Asphalt", "img": "/estimador/img/asphalt-shingle-roof.jpg" },
+    "metal": { "nombre": "Metal", "img": "/estimador/img/metal-roof-material.jpg" },
+    "tile": { "nombre": "Tile", "img": "/estimador/img/tile-roof-material.jpg" },
+    "slate": { "nombre": "Slate", "img": "/estimador/img/slate-roof-material.jpg" },
+    "tpo": { "nombre": "TPO", "img": "/estimador/img/tpo-roof-material.jpg" },
+    "pvc": { "nombre": "PVC", "img": "/estimador/img/pvc-roofing-material.jpg" },
+    "modified-bitumen": { "nombre": "Modified Bitumen", "img": "/estimador/img/modified-bitumen-roofing-material.jpg" }
+  },
+  "materiales": {
+    "3tab": { "nombre": "3 Tab Shingles", "tipos": ["residential"], "img": "/estimador/img/3-tab-shingle-roof.jpg", "desc": "A traditional, budget-friendly asphalt shingle with a flat, uniform look." },
+    "arch": { "nombre": "Architectural Shingles", "tipos": ["residential"], "img": "/estimador/img/architectural-shingles.jpg", "desc": "Dimensional asphalt shingles with a high-end look, strong wind ratings and a long manufacturer warranty." },
+    "designer": { "nombre": "Designer Shingles", "tipos": ["residential"], "img": "/estimador/img/asphalt-shingle-roof.jpg", "desc": "Premium asphalt shingles that mimic slate or wood shake, with extra thickness and curb appeal." },
+    "rpanel": { "nombre": "R Panel Metal", "tipos": ["residential", "commercial"], "img": "/estimador/img/r-panel-metal-roof.jpg", "desc": "A durable, cost-effective exposed-fastener metal roof for homes, shops and commercial buildings." },
+    "standing-seam": { "nombre": "Standing Seam Metal", "tipos": ["residential", "commercial"], "img": "/estimador/img/metal-roof.jpg", "desc": "A premium metal roof with hidden fasteners and a clean, modern look. Built to last decades." },
+    "clay-tile": { "nombre": "Clay Tile", "tipos": ["residential"], "img": "/estimador/img/tile-roof-material1.jpg", "desc": "A long-lasting natural clay roof with a timeless, high-end look." },
+    "slate": { "nombre": "Slate", "tipos": ["residential"], "img": "/estimador/img/slate-roof-installed.jpg", "desc": "Natural stone roofing prized for its elegance and exceptional lifespan." },
+    "tpo": { "nombre": "TPO", "tipos": ["commercial"], "img": "/estimador/img/tpo-commercial.jpg", "desc": "A single-ply membrane for flat and low-slope roofs. Energy efficient and resistant to UV and heat." },
+    "pvc": { "nombre": "PVC", "tipos": ["commercial"], "img": "/estimador/img/commercial-pvc-roof.jpg", "desc": "A durable single-ply membrane with welded seams and strong chemical resistance." },
+    "modified-bitumen": { "nombre": "Modified Bitumen", "tipos": ["commercial"], "img": "/estimador/img/modified-bitumen-roofing-material.jpg", "desc": "A tough multi-layer asphalt-based system for flat and low-slope roofs." }
+  }
+}
